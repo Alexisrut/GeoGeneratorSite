@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+</head>
+<body>
+    <h1 class="title">Map Generator</h1>
+    <div class = "container">
+        <form action="/" method="post">
+            <label for="city" class = "label"><p>City</p></label>
+            <input type="text" id="city" name="city" required><br>
+            <label for="organization" class = "label"><p>Organization</p></label>
+            <input type="text" id="organization" name="organization" required><br>
+            <button type="submit" class="submit-button">Generate Map</button>
+        </form>
+        <span class = "disclaimer-text">Время генерации зависит от размера города. <p>Среднее время генерации: 50 минут</p></span>
+        <img src="{{ url_for('static', filename='img/СИБУР.png') }}" alt="" class="logo">
+    </div>
+</body>
+</html>
